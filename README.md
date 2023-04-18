@@ -104,7 +104,7 @@ It makes train data performance better for ridge but not for the test data. Howe
 
 ## After Adding random feature 1 (Experiment 5)
 
-From the results, it seems after adding random feature all the models performance get worse
+From the results, it seems after adding random feature all the models performance get worse which seems logical because it is irrelevant feature
 ![image](https://user-images.githubusercontent.com/15922299/232874574-1f5c96cb-1f9c-4c8f-8686-db689bc04427.png)
 
 

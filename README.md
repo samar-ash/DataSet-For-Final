@@ -127,6 +127,9 @@ The final pipeline I created, used the imputer instead of filling Nan value by m
 
 ![image](https://user-images.githubusercontent.com/15922299/232902855-de4d9c3d-2d0d-4cb7-adb2-acdff0502d8d.png)
 
+## Future Improvements:
+If I had more time, I would test ensemble learning with voting to see if it could make it better.nd I should submit the competition to see the result on the real test dataset.
+
 
 
 

@@ -5,11 +5,18 @@ https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/
 # House Prediction 
 
 -------------------------------------------------
-## Introduction
+## Data Description
 A competition hosted by Kaggle
 The train  and test data that is given contains 1460  observations containing 79 features including categorical, ordinal and numeric features .
+![image](https://user-images.githubusercontent.com/15922299/232815125-204d895c-58e7-4f35-9fcc-4432ba3f7da4.png)
+
 you can see data_description.txt file for more information about features.
 ![image](https://user-images.githubusercontent.com/15922299/232814240-3a0984e2-e82a-43ee-a3f2-163f0776dfda.png)
+
+First, I started with some analyzation on dataset.
+![image](https://user-images.githubusercontent.com/15922299/232814936-bfcd3161-3e36-4ffa-b6a3-4ed081bbfd29.png)
+![image](https://user-images.githubusercontent.com/15922299/232815578-cc5236ae-66ff-450d-8561-2edac5da44c3.png)
+
 
    
 

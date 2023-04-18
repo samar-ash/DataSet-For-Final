@@ -80,6 +80,9 @@ The Ridge performs poorly both for train and test. However GradientBoostRegressi
 Svm get better only for train data but worse for the test data.
 ![image](https://user-images.githubusercontent.com/15922299/232880635-45579b3f-4562-4260-b954-0004e3b51dc4.png)
 
+## After Experiment 2(Polynomial Feature):
+
+
 ## After Experiment 3 PCA transformation (Experiment 3):
 The results for test data get slightly better for GradientBoosting.
 But it does not perform well for Ridge and SVM
@@ -112,15 +115,13 @@ Due to the fact that the dataset was large we couldn’t properly include every 
 Ridge and SVM did not show any significant change. However GradientBoosting show slighlty better result.
 ![image](https://user-images.githubusercontent.com/15922299/232900686-aa07d95a-69fb-401f-903d-11b438cd7312.png)
 
-#Pipeline with the Best:
-The final pipeline I created, used the imputer instead of filling Nan value by my approach and also use MinMaxScalor for numerical features and OnehotEncoder for categorical data and also OrdinalEncoder for ordinal features, with GradientBoostingRegression. Here is the final result:
+## Pipeline with the Best:
+The final pipeline I created, used the imputer instead of filling Nan value by my approach and also use MinMaxScalor for numerical features and OnehotEncoder for categorical data and also OrdinalEncoder for ordinal features and polynomial degree 2 , with GradientBoostingRegression. Here is the final result:
 
 ![image](https://user-images.githubusercontent.com/15922299/232902855-de4d9c3d-2d0d-4cb7-adb2-acdff0502d8d.png)
 
-### Information about the competition result: Coming Soon!
 
-## Sources 
-https://www.kaggle.com/competitions/otto-recommender-system/overview
-https://www.kaggle.com/code/junjitakeshima/otto-easy-understanding-for-beginner-en
+
+
 
 

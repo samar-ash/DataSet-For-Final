@@ -85,11 +85,13 @@ adding polynomial feature usually should gives us better training result( even s
 
 It increased the training performance for Ridge significntly better, but the performance for test data gets significantly worse.
 However, GriadientBoosting get much better result both for train and test dataset.
+![image](https://user-images.githubusercontent.com/15922299/232914092-ecaa851b-b31e-4ebd-b06d-d6427ed690c7.png)
 
 
 ## After Experiment 3 PCA transformation (Experiment 3):
-The results for test data get slightly better for GradientBoosting.
-But it does not perform well for Ridge and SVM
+there is no significant change, and it gets the results just a little worse
+![image](https://user-images.githubusercontent.com/15922299/232914422-c4663057-7410-4cc0-bd8e-51b271f6af31.png)
+
 
 
 ## After Experiment 4 MinmaxScaling (Experiment 4):

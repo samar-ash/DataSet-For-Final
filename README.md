@@ -70,21 +70,18 @@ RMSE= Root Mean Squared Error (RMSE) is the square root of the mean squared erro
 in regression problems, the RMSE score is used as a metric to measure performance and the mean squared error (MSE) is used to evaluate the performance of a regression model.
 R 2 (coefficient of determination) regression score function.Best possible score for R2 is 1.0 and it can be negative (because the model can be arbitrarily worse).
 
-## The result of running Base line gridsearch is as follows: 
-![image](https://user-images.githubusercontent.com/15922299/232853403-1ef4ecf5-b2c0-4b60-8354-3307657ddc09.png)
+## The result of running Baseline gridsearch is as follows: 
+![image](https://user-images.githubusercontent.com/15922299/232869657-1d3a062e-d99a-437d-a41c-268dc8dc1d13.png)
 
-4  different Machine Learning algorithms were used:
-- Unsupervised
-  - K-means Clustering
-- Supervised
-  - K-Nearest Neighbors
-  - Logistic Regression
-  - Decision Trees
- 
-Small samples were originally used so program would run quicker 
-Models were then chosen based on accuracy score to compare between others
+Based on the table,It seems GradientBoostingRegression did better than two other algorithms both for train and test.
 
-## Findings
+
+## After Adding random feature 1 
+
+From the results, it seems after adding random feature all the models performance get worse
+![image](https://user-images.githubusercontent.com/15922299/232874574-1f5c96cb-1f9c-4c8f-8686-db689bc04427.png)
+
+
 After performing the models we've determined KNN was the best model because of its accuracy rate with the testing data.
 
 We can probably receive a better model if we are able to manipulate existing features 

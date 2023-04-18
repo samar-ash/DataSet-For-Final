@@ -74,7 +74,14 @@ R 2 (coefficient of determination) regression score function.Best possible score
 ![image](https://user-images.githubusercontent.com/15922299/232869657-1d3a062e-d99a-437d-a41c-268dc8dc1d13.png)
 
 Based on the table,It seems GradientBoostingRegression did better than two other algorithms both for train and test.
+## After Experiment 1:
+The Ridge performs poorly both for train and test. However GradientBoostRegression performed very well for train and test.
+Svm get better only for train data but worse for the test data.
+![image](https://user-images.githubusercontent.com/15922299/232880635-45579b3f-4562-4260-b954-0004e3b51dc4.png)
 
+## After Experiment 3 PCA transformation:
+The results for test data get slightly better for GradientBoosting.
+But it does not perform well for Ridge and SVM
 
 ## After Adding random feature 1 
 

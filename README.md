@@ -35,7 +35,7 @@ We will now take a look at how the categorical features are distributed. In orde
 
 ![image](https://user-images.githubusercontent.com/15922299/232816496-69dec857-a6e0-4ff7-93d9-2061b0c23f62.png)
 ![image](https://user-images.githubusercontent.com/15922299/232816512-cc6259ce-4c73-4e59-8860-802f716a0cbf.png)
-![image](https://user-images.githubusercontent.com/15922299/232816582-3e0111ba-1a75-42fa-b66a-793c2344675f.png)
+
 
 
 ## And finally we try to see outliers:
@@ -44,19 +44,35 @@ We will now take a look at how the categorical features are distributed. In orde
    
 
 ## Preprocessing/ Exploration with the Data
+
+for the first step, I checked Nan values in the data:
+
+![image](https://user-images.githubusercontent.com/15922299/232816582-3e0111ba-1a75-42fa-b66a-793c2344675f.png)
+
 There is NA for some records that does not mean it is an empty record. Forexample in the picture below, it means there is no access to the alley. However, all of them converted to Nan values automatically. So as a first step, I replaced those NA, with NOT.
 ![image](https://user-images.githubusercontent.com/15922299/232824585-caaf58ec-915b-4f06-be83-07232eb7f94f.png)
 ![image](https://user-images.githubusercontent.com/15922299/232825381-4dd8207f-8b98-48e6-adf8-f3007a4a1ebf.png)
 
+## Create a Transformer 
+I created a transform function to categorical features to OneHotEncoder and ordinal features to OrdinalEncoder. Also to fill Empty values using SimpleImputer.
 
-No nan values were included in this dataset
-We also converted Type to numerical data by using 
+## Train-Test Split
+## GridSearchCv Evaluation:
+I used neg_mean_error for GridSearchCV evaluation
+Scikit-learn considers by convention that a score follow the rule: 'higher values are better than lower values'. In this case a small MSE shows that your predictions are close to data so it follows the opposite rule. That's why sklearn consider the negative (actually opposite) MSE as score.
+And MSE means minimum square error( y_real - y_predicted)
+The R2 score is one of the performance evaluation measures for regression-based machine learning models. It is also known as the coefficient of determination. If you want to learn how to evaluate the performance of a machine learning model using the r squared score
 
-df.replace({'clicks': 0, 'carts': 1,'orders':2}, inplace=True)
+## Model Evaluation
+I used R2 Score and MSE and RMSE and MAE
+MAE=The mean absolute error measures the average differences between predicted values and actual values
+RMSE= Root Mean Squared Error (RMSE) is the square root of the mean squared error between the predicted and actual values.
+in regression problems, the RMSE score is used as a metric to measure performance and the mean squared error (MSE) is used to evaluate the performance of a regression model.
+R 2 (coefficient of determination) regression score function.Best possible score for R2 is 1.0 and it can be negative (because the model can be arbitrarily worse).
 
-<img src="sns_pairplot.jpg" alt="Alt text" title="Pair Plots of all Features">
+## The result of running Base line gridsearch is as follows: 
+![image](https://user-images.githubusercontent.com/15922299/232853403-1ef4ecf5-b2c0-4b60-8354-3307657ddc09.png)
 
-## Modeling
 4  different Machine Learning algorithms were used:
 - Unsupervised
   - K-means Clustering

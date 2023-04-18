@@ -50,6 +50,7 @@ for the first step, I checked Nan values in the data:
 ![image](https://user-images.githubusercontent.com/15922299/232816582-3e0111ba-1a75-42fa-b66a-793c2344675f.png)
 
 There is NA for some records that does not mean it is an empty record. Forexample in the picture below, it means there is no access to the alley. However, all of them converted to Nan values automatically. So as a first step, I replaced those NA, with NOT.
+
 ![image](https://user-images.githubusercontent.com/15922299/232824585-caaf58ec-915b-4f06-be83-07232eb7f94f.png)
 ![image](https://user-images.githubusercontent.com/15922299/232825381-4dd8207f-8b98-48e6-adf8-f3007a4a1ebf.png)
 
@@ -83,8 +84,14 @@ Svm get better only for train data but worse for the test data.
 The results for test data get slightly better for GradientBoosting.
 But it does not perform well for Ridge and SVM
 
+
 ## After Experiment 4 MinmaxScaling:
-https://github.com/samar-ash/ML-House-Prediction/edit/main/README.md
+MinMaxScaler rescales the data set such that all feature values are in the range [0, 1] as shown in the right panel below. However, this scaling compress all inliers in the narrow range [0, 0.005] for the transformed number of households.
+
+It makes train data performance better for ridge but not for the test data. However it makes significantly increase in the performance of test data for GradientBoosting. And performance is geting worse for SVM
+
+![image](https://user-images.githubusercontent.com/15922299/232897727-2f97a4a3-f0ca-487f-ae25-199ef6cf6d04.png)
+
 
 ## After Adding random feature 1 
 

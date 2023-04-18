@@ -89,8 +89,9 @@ However, GriadientBoosting get much better result both for train and test datase
 
 
 ## After Experiment 3 PCA transformation (Experiment 3):
-there is no significant change, and it gets the results just a little worse
-![image](https://user-images.githubusercontent.com/15922299/232914422-c4663057-7410-4cc0-bd8e-51b271f6af31.png)
+there is no significant change, and it gets the results just a little worse. But for SVM results was significantly worse.
+![image](https://user-images.githubusercontent.com/15922299/232915559-8b970bd1-3e79-4abe-94de-b04ba96a7909.png)
+
 
 
 

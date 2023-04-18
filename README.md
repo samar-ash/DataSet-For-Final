@@ -83,6 +83,9 @@ Svm get better only for train data but worse for the test data.
 The results for test data get slightly better for GradientBoosting.
 But it does not perform well for Ridge and SVM
 
+## After Experiment 4 MinmaxScaling:
+https://github.com/samar-ash/ML-House-Prediction/edit/main/README.md
+
 ## After Adding random feature 1 
 
 From the results, it seems after adding random feature all the models performance get worse

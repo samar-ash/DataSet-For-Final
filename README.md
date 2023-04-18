@@ -80,12 +80,12 @@ The Ridge performs poorly both for train and test. However GradientBoostRegressi
 Svm get better only for train data but worse for the test data.
 ![image](https://user-images.githubusercontent.com/15922299/232880635-45579b3f-4562-4260-b954-0004e3b51dc4.png)
 
-## After Experiment 3 PCA transformation:
+## After Experiment 3 PCA transformation (Experiment 3):
 The results for test data get slightly better for GradientBoosting.
 But it does not perform well for Ridge and SVM
 
 
-## After Experiment 4 MinmaxScaling:
+## After Experiment 4 MinmaxScaling (Experiment 4):
 MinMaxScaler rescales the data set such that all feature values are in the range [0, 1] as shown in the right panel below. However, this scaling compress all inliers in the narrow range [0, 0.005] for the transformed number of households.
 
 It makes train data performance better for ridge but not for the test data. However it makes significantly increase in the performance of test data for GradientBoosting. And performance is geting worse for SVM
@@ -93,7 +93,7 @@ It makes train data performance better for ridge but not for the test data. Howe
 ![image](https://user-images.githubusercontent.com/15922299/232897727-2f97a4a3-f0ca-487f-ae25-199ef6cf6d04.png)
 
 
-## After Adding random feature 1 
+## After Adding random feature 1 (Experiment 5)
 
 From the results, it seems after adding random feature all the models performance get worse
 ![image](https://user-images.githubusercontent.com/15922299/232874574-1f5c96cb-1f9c-4c8f-8686-db689bc04427.png)
@@ -104,6 +104,18 @@ After performing the models we've determined KNN was the best model because of i
 We can probably receive a better model if we are able to manipulate existing features 
 
 Due to the fact that the dataset was large we couldn’t properly include every data point but there might be ways to work with big data that we don’t know at the moment
+
+## After Adding random feature 2 (Discrete feature) ((Experiment 5)
+
+![image](https://user-images.githubusercontent.com/15922299/232901223-a699a684-9353-4c1b-9a6b-56edff30d4c8.png)
+
+Ridge and SVM did not show any significant change. However GradientBoosting show slighlty better result.
+![image](https://user-images.githubusercontent.com/15922299/232900686-aa07d95a-69fb-401f-903d-11b438cd7312.png)
+
+#Pipeline with the Best:
+The final pipeline I created, used the imputer instead of filling Nan value by my approach and also use MinMaxScalor for numerical features and OnehotEncoder for categorical data and also OrdinalEncoder for ordinal features, with GradientBoostingRegression. Here is the final result:
+
+![image](https://user-images.githubusercontent.com/15922299/232902855-de4d9c3d-2d0d-4cb7-adb2-acdff0502d8d.png)
 
 ### Information about the competition result: Coming Soon!
 

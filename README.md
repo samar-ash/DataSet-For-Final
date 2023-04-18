@@ -81,6 +81,10 @@ Svm get better only for train data but worse for the test data.
 ![image](https://user-images.githubusercontent.com/15922299/232880635-45579b3f-4562-4260-b954-0004e3b51dc4.png)
 
 ## After Experiment 2(Polynomial Feature):
+adding polynomial feature usually should gives us better training result( even sometime overfitting) and sometimes better result for test data depends on the nature of features.
+
+It increased the training performance for Ridge significntly better, but the performance for test data gets significantly worse.
+However, GriadientBoosting get much better result both for train and test dataset.
 
 
 ## After Experiment 3 PCA transformation (Experiment 3):

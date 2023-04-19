@@ -3,6 +3,8 @@
 https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data
 
 # House Prediction 
+The purpose of this project is to predict the house prices based on some features. The data is for kaggle competition.
+I chose this dataset because my sister and I are in the process of buying a house and it would be interesting to see which features are more correlated and to see if we can predict the house price based on some features.
 
 -------------------------------------------------
 ## Data Description
@@ -35,6 +37,9 @@ We will now take a look at how the categorical features are distributed. In orde
 
 ![image](https://user-images.githubusercontent.com/15922299/232816496-69dec857-a6e0-4ff7-93d9-2061b0c23f62.png)
 ![image](https://user-images.githubusercontent.com/15922299/232816512-cc6259ce-4c73-4e59-8860-802f716a0cbf.png)
+
+## Lets look at the correlation between features:
+![image](https://user-images.githubusercontent.com/15922299/232950993-ed90be9f-3618-4a67-8785-3c540376eec7.png)
 
 
 
@@ -89,8 +94,11 @@ However, GriadientBoosting get much better result both for train and test datase
 
 
 ## After Experiment 3 PCA transformation (Experiment 3):
-there is no significant change, and it gets the results just a little worse. But for SVM results was significantly worse.
-![image](https://user-images.githubusercontent.com/15922299/232915559-8b970bd1-3e79-4abe-94de-b04ba96a7909.png)
+The result get worse for Ridge.
+a liitle change in GradientBoostingRegression only in train set and it makes it worse.
+For SVM results was significantly get worse.
+
+![image](https://user-images.githubusercontent.com/15922299/232956291-e8ad4bb2-0a49-4894-b7c4-6f4ac3e37735.png)
 
 
 
@@ -125,7 +133,7 @@ Ridge and SVM did not show any significant change. However GradientBoosting show
 ## Pipeline with the Best:
 The final pipeline I created, used the imputer instead of filling Nan value by my approach and also use MinMaxScalor for numerical features and OnehotEncoder for categorical data and also OrdinalEncoder for ordinal features and polynomial degree 2 , with GradientBoostingRegression. Here is the final result:
 
-![image](https://user-images.githubusercontent.com/15922299/232902855-de4d9c3d-2d0d-4cb7-adb2-acdff0502d8d.png)
+![image](https://user-images.githubusercontent.com/15922299/232950652-037800b3-9f38-42bd-a1c3-0401723e4427.png)
 
 ## Future Improvements:
 If I had more time, I would test ensemble learning with voting to see if it could make it better.nd I should submit the competition to see the result on the real test dataset.

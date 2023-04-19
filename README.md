@@ -54,10 +54,9 @@ For the first step, I checked Nan values in the data:
 
 There is NA for some records that does not mean it is an empty record. Forexample in the picture below, it means there is no access to the alley. However, all of them converted to Nan values automatically. So as a first step, I replaced those NA, with NOT.
 
-<img src="https://user-images.githubusercontent.com/15922299/232824585-caaf58ec-915b-4f06-be83-07232eb7f94f.png" width=500/>
-<img src="[![image](https://user-images.githubusercontent.com/15922299/232965357-b72f0602-f0f6-4335-977b-d93166f8acb0.png)](https://user-images.githubusercontent.com/15922299/232825381-4dd8207f-8b98-48e6-adf8-f3007a4a1ebf.png)" width=500/>
-![image]()
-![image]()
+<img src="https://user-images.githubusercontent.com/15922299/232824585-caaf58ec-915b-4f06-be83-07232eb7f94f.png" width=300/>
+<img src="https://user-images.githubusercontent.com/15922299/232965357-b72f0602-f0f6-4335-977b-d93166f8acb0.png" width=400 />
+<img  src="https://user-images.githubusercontent.com/15922299/232825381-4dd8207f-8b98-48e6-adf8-f3007a4a1ebf.png" width=650/>
 
 ## Create a Transformer 
 I created a transform function to categorical features to OneHotEncoder and ordinal features to OrdinalEncoder. Also to fill Empty values using SimpleImputer.
@@ -77,13 +76,15 @@ in regression problems, the RMSE score is used as a metric to measure performanc
 R 2 (coefficient of determination) regression score function.Best possible score for R2 is 1.0 and it can be negative (because the model can be arbitrarily worse).
 
 ## The result of running Baseline gridsearch is as follows: 
-![image](https://user-images.githubusercontent.com/15922299/232960550-f8aaf7ea-2c90-4834-9e56-7a13a0d87dc1.png)
+
+<img  src="https://user-images.githubusercontent.com/15922299/232960550-f8aaf7ea-2c90-4834-9e56-7a13a0d87dc1.png" width=430  />
 
 Based on the table,It seems GradientBoostingRegressor did better than two other algorithms both for train and test.
 ## After Experiment 1:
 The Ridge performs poorly both for train and test. However GradientBoostingRegressor performed very well for train and test.
 Svm get better only for train data but worse for the test data.
-![image](https://user-images.githubusercontent.com/15922299/232960708-ba1b7717-71a5-4d99-93dc-99a923afc551.png)
+
+<img  src="https://user-images.githubusercontent.com/15922299/232960708-ba1b7717-71a5-4d99-93dc-99a923afc551.png" width=430/>
 
 
 ## After Experiment 2( adding Polynomial Feature):
@@ -91,36 +92,28 @@ adding polynomial feature usually should gives us better training result( even s
 
 GradientBoostingRegressor get much better result both for train and test dataset.
 SVM and Ridge seems to get overfitted because it has great result for training set but very poor result for the test set.
-![image](https://user-images.githubusercontent.com/15922299/232960861-10e4c907-05e4-4cdd-9b0d-f3b28247cff0.png)
 
-
-
+<img  src="https://user-images.githubusercontent.com/15922299/232960861-10e4c907-05e4-4cdd-9b0d-f3b28247cff0.png" width=430/>
 
 ## After Experiment 3 PCA transformation (Experiment 3):
 The result get worse for Ridge.
 a liitle change in GradientBoostingRegressor only in train set and it makes it worse.
 For SVM results was significantly get worse.
 
-![image](https://user-images.githubusercontent.com/15922299/232961021-55f89586-7076-464a-88c2-f81605561c80.png)
-
-
-
+<img  src="https://user-images.githubusercontent.com/15922299/232961021-55f89586-7076-464a-88c2-f81605561c80.png" width=430/>
 
 ## After Experiment 4 MinmaxScaling (Experiment 4):
 MinMaxScaler rescales the data set such that all feature values are in the range [0, 1] as shown in the right panel below. However, this scaling compress all inliers in the narrow range [0, 0.005] for the transformed number of households.
 
 It makes train data performance better for ridge but not for the test data. However it makes significantly increase in the performance of test data for GradientBoostingRegressor. And performance is geting worse for SVM
 
-![image](https://user-images.githubusercontent.com/15922299/232961144-87fbfe44-24b2-4691-890c-c6bde7baef66.png)
-
-
+<img  src="https://user-images.githubusercontent.com/15922299/232961144-87fbfe44-24b2-4691-890c-c6bde7baef66.png" width=430/>
 
 ## After Adding random feature 1 (Experiment 5)
 
 From the results, it seems after adding random feature all the models performance get worse which seems logical because it is irrelevant feature
 
-![image](https://user-images.githubusercontent.com/15922299/232961378-198426f7-5f13-43d6-8108-4dfce139fa87.png)
-
+<img  src="https://user-images.githubusercontent.com/15922299/232961378-198426f7-5f13-43d6-8108-4dfce139fa87.png" width=430/>
 
 After performing the models we've determined KNN was the best model because of its accuracy rate with the testing data.
 
@@ -132,23 +125,16 @@ Due to the fact that the dataset was large we couldn’t properly include every 
 
 Lets see some record with our random discrete feature
 
-![image](https://user-images.githubusercontent.com/15922299/232901223-a699a684-9353-4c1b-9a6b-56edff30d4c8.png)
+<img  src="https://user-images.githubusercontent.com/15922299/232901223-a699a684-9353-4c1b-9a6b-56edff30d4c8.png" width=430/>
 
 Ridge and SVM did not show any significant change. However GradientBoostingRegressor show slighlty better result.
 
-![image](https://user-images.githubusercontent.com/15922299/232961508-9a4320ec-41a9-488e-be7f-f88df32ebf08.png)
+<img  src="https://user-images.githubusercontent.com/15922299/232961508-9a4320ec-41a9-488e-be7f-f88df32ebf08.png" width=430/>
 
 ## Pipeline with the Best:
 The final pipeline I created, used the imputer instead of filling Nan value by my approach and also use MinMaxScalor for numerical features and OnehotEncoder for categorical data and also OrdinalEncoder for ordinal features and polynomial degree 2 , with GradientBoostingRegressor. Here is the final result:
 
-![image](https://user-images.githubusercontent.com/15922299/232950652-037800b3-9f38-42bd-a1c3-0401723e4427.png)
+<img  src="https://user-images.githubusercontent.com/15922299/232950652-037800b3-9f38-42bd-a1c3-0401723e4427.png" width=430/>
 
 You can see the comprehensive results of all experiments in the Experiment_Evaluation.xlsx.
-
-
-
-
-
-
-
 

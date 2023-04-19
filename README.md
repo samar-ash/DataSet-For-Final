@@ -141,6 +141,8 @@ The final pipeline I created, used the imputer instead of filling Nan value by m
 
 ![image](https://user-images.githubusercontent.com/15922299/232950652-037800b3-9f38-42bd-a1c3-0401723e4427.png)
 
+The complete results are in the experiment_evaluation.xlsx
+
 
 
 

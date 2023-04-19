@@ -50,7 +50,7 @@ We will now take a look at how the categorical features are distributed. In orde
 
 ## Preprocessing/ Exploration with the Data
 
-for the first step, I checked Nan values in the data:
+For the first step, I checked Nan values in the data:
 
 ![image](https://user-images.githubusercontent.com/15922299/232816582-3e0111ba-1a75-42fa-b66a-793c2344675f.png)
 
@@ -77,20 +77,21 @@ in regression problems, the RMSE score is used as a metric to measure performanc
 R 2 (coefficient of determination) regression score function.Best possible score for R2 is 1.0 and it can be negative (because the model can be arbitrarily worse).
 
 ## The result of running Baseline gridsearch is as follows: 
-![image](https://user-images.githubusercontent.com/15922299/232869657-1d3a062e-d99a-437d-a41c-268dc8dc1d13.png)
+![image](https://user-images.githubusercontent.com/15922299/232960550-f8aaf7ea-2c90-4834-9e56-7a13a0d87dc1.png)
 
 Based on the table,It seems GradientBoostingRegressor did better than two other algorithms both for train and test.
 ## After Experiment 1:
 The Ridge performs poorly both for train and test. However GradientBoostingRegressor performed very well for train and test.
 Svm get better only for train data but worse for the test data.
-![image](https://user-images.githubusercontent.com/15922299/232880635-45579b3f-4562-4260-b954-0004e3b51dc4.png)
+![image](https://user-images.githubusercontent.com/15922299/232960708-ba1b7717-71a5-4d99-93dc-99a923afc551.png)
 
-## After Experiment 2(Polynomial Feature):
+
+## After Experiment 2( adding Polynomial Feature):
 adding polynomial feature usually should gives us better training result( even sometime overfitting) and sometimes better result for test data depends on the nature of features.
 
 GradientBoostingRegressor get much better result both for train and test dataset.
 SVM and Ridge seems to get overfitted because it has great result for training set but very poor result for the test set.
-![image](https://user-images.githubusercontent.com/15922299/232959727-86f57424-fce7-44b0-871e-6d8b8c0e500d.png)
+![image](https://user-images.githubusercontent.com/15922299/232960861-10e4c907-05e4-4cdd-9b0d-f3b28247cff0.png)
 
 
 
@@ -100,7 +101,7 @@ The result get worse for Ridge.
 a liitle change in GradientBoostingRegressor only in train set and it makes it worse.
 For SVM results was significantly get worse.
 
-![image](https://user-images.githubusercontent.com/15922299/232956291-e8ad4bb2-0a49-4894-b7c4-6f4ac3e37735.png)
+![image](https://user-images.githubusercontent.com/15922299/232961021-55f89586-7076-464a-88c2-f81605561c80.png)
 
 
 
@@ -110,13 +111,14 @@ MinMaxScaler rescales the data set such that all feature values are in the range
 
 It makes train data performance better for ridge but not for the test data. However it makes significantly increase in the performance of test data for GradientBoostingRegressor. And performance is geting worse for SVM
 
-![image](https://user-images.githubusercontent.com/15922299/232897727-2f97a4a3-f0ca-487f-ae25-199ef6cf6d04.png)
+![image](https://user-images.githubusercontent.com/15922299/232961144-87fbfe44-24b2-4691-890c-c6bde7baef66.png)
+
 
 
 ## After Adding random feature 1 (Experiment 5)
 
 From the results, it seems after adding random feature all the models performance get worse which seems logical because it is irrelevant feature
-![image](https://user-images.githubusercontent.com/15922299/232874574-1f5c96cb-1f9c-4c8f-8686-db689bc04427.png)
+![image](https://user-images.githubusercontent.com/15922299/232961378-198426f7-5f13-43d6-8108-4dfce139fa87.png)
 
 
 After performing the models we've determined KNN was the best model because of its accuracy rate with the testing data.
@@ -127,18 +129,19 @@ Due to the fact that the dataset was large we couldn’t properly include every 
 
 ## After Adding random feature 2 (Discrete feature) ((Experiment 5)
 
+Lets see some record with our random discrete feature
+
 ![image](https://user-images.githubusercontent.com/15922299/232901223-a699a684-9353-4c1b-9a6b-56edff30d4c8.png)
 
 Ridge and SVM did not show any significant change. However GradientBoostingRegressor show slighlty better result.
-![image](https://user-images.githubusercontent.com/15922299/232900686-aa07d95a-69fb-401f-903d-11b438cd7312.png)
+![image](https://user-images.githubusercontent.com/15922299/232961508-9a4320ec-41a9-488e-be7f-f88df32ebf08.png)
 
 ## Pipeline with the Best:
 The final pipeline I created, used the imputer instead of filling Nan value by my approach and also use MinMaxScalor for numerical features and OnehotEncoder for categorical data and also OrdinalEncoder for ordinal features and polynomial degree 2 , with GradientBoostingRegressor. Here is the final result:
 
 ![image](https://user-images.githubusercontent.com/15922299/232950652-037800b3-9f38-42bd-a1c3-0401723e4427.png)
 
-## Future Improvements:
-If I had more time, I would test ensemble learning with voting to see if it could make it better.nd I should submit the competition to see the result on the real test dataset.
+
 
 
 

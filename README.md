@@ -125,7 +125,7 @@ Due to the fact that the dataset was large we couldn’t properly include every 
 
 Lets see some record with our random discrete feature
 
-<img  src="https://user-images.githubusercontent.com/15922299/232901223-a699a684-9353-4c1b-9a6b-56edff30d4c8.png" width=430/>
+<img  src="https://user-images.githubusercontent.com/15922299/232901223-a699a684-9353-4c1b-9a6b-56edff30d4c8.png" width=650/>
 
 Ridge and SVM did not show any significant change. However GradientBoostingRegressor show slighlty better result.
 
@@ -134,7 +134,7 @@ Ridge and SVM did not show any significant change. However GradientBoostingRegre
 ## Pipeline with the Best:
 The final pipeline I created, used the imputer instead of filling Nan value by my approach and also use MinMaxScalor for numerical features and OnehotEncoder for categorical data and also OrdinalEncoder for ordinal features and polynomial degree 2 , with GradientBoostingRegressor. Here is the final result:
 
-<img  src="https://user-images.githubusercontent.com/15922299/232950652-037800b3-9f38-42bd-a1c3-0401723e4427.png" width=430/>
+<img  src="https://user-images.githubusercontent.com/15922299/232950652-037800b3-9f38-42bd-a1c3-0401723e4427.png" width=300/>
 
 You can see the comprehensive results of all experiments in the Experiment_Evaluation.xlsx.
 

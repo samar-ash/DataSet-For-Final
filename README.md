@@ -3,7 +3,7 @@
 https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data
 
 # House Prediction 
-The purpose of this project is to predict the house prices based on some features. The data is for kaggle competition.
+The purpose of this project is to predict the house prices based on some features.It is a regression problem. The data is for kaggle competition.
 I chose this dataset because my sister and I are in the process of buying a house and it would be interesting to see which features are more correlated and to see if we can predict the house price based on some features.
 
 -------------------------------------------------

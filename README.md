@@ -118,6 +118,7 @@ It makes train data performance better for ridge but not for the test data. Howe
 ## After Adding random feature 1 (Experiment 5)
 
 From the results, it seems after adding random feature all the models performance get worse which seems logical because it is irrelevant feature
+
 ![image](https://user-images.githubusercontent.com/15922299/232961378-198426f7-5f13-43d6-8108-4dfce139fa87.png)
 
 
@@ -127,13 +128,14 @@ We can probably receive a better model if we are able to manipulate existing fea
 
 Due to the fact that the dataset was large we couldn’t properly include every data point but there might be ways to work with big data that we don’t know at the moment
 
-## After Adding random feature 2 (Discrete feature) ((Experiment 5)
+## After Adding random feature 2 (Discrete feature) (Experiment 5)
 
 Lets see some record with our random discrete feature
 
 ![image](https://user-images.githubusercontent.com/15922299/232901223-a699a684-9353-4c1b-9a6b-56edff30d4c8.png)
 
 Ridge and SVM did not show any significant change. However GradientBoostingRegressor show slighlty better result.
+
 ![image](https://user-images.githubusercontent.com/15922299/232961508-9a4320ec-41a9-488e-be7f-f88df32ebf08.png)
 
 ## Pipeline with the Best:
@@ -141,7 +143,7 @@ The final pipeline I created, used the imputer instead of filling Nan value by m
 
 ![image](https://user-images.githubusercontent.com/15922299/232950652-037800b3-9f38-42bd-a1c3-0401723e4427.png)
 
-The complete results are in the experiment_evaluation.xlsx
+You can see the comprehensive results of all experiments in the Experiment_Evaluation.xlsx.
 
 
 

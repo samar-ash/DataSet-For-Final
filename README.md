@@ -79,23 +79,25 @@ R 2 (coefficient of determination) regression score function.Best possible score
 ## The result of running Baseline gridsearch is as follows: 
 ![image](https://user-images.githubusercontent.com/15922299/232869657-1d3a062e-d99a-437d-a41c-268dc8dc1d13.png)
 
-Based on the table,It seems GradientBoostingRegression did better than two other algorithms both for train and test.
+Based on the table,It seems GradientBoostingRegressor did better than two other algorithms both for train and test.
 ## After Experiment 1:
-The Ridge performs poorly both for train and test. However GradientBoostRegression performed very well for train and test.
+The Ridge performs poorly both for train and test. However GradientBoostingRegressor performed very well for train and test.
 Svm get better only for train data but worse for the test data.
 ![image](https://user-images.githubusercontent.com/15922299/232880635-45579b3f-4562-4260-b954-0004e3b51dc4.png)
 
 ## After Experiment 2(Polynomial Feature):
 adding polynomial feature usually should gives us better training result( even sometime overfitting) and sometimes better result for test data depends on the nature of features.
 
-It increased the training performance for Ridge significntly better, but the performance for test data gets significantly worse.
-However, GriadientBoosting get much better result both for train and test dataset.
-![image](https://user-images.githubusercontent.com/15922299/232914092-ecaa851b-b31e-4ebd-b06d-d6427ed690c7.png)
+GradientBoostingRegressor get much better result both for train and test dataset.
+SVM and Ridge seems to get overfitted because it has great result for training set but very poor result for the test set.
+![image](https://user-images.githubusercontent.com/15922299/232959727-86f57424-fce7-44b0-871e-6d8b8c0e500d.png)
+
+
 
 
 ## After Experiment 3 PCA transformation (Experiment 3):
 The result get worse for Ridge.
-a liitle change in GradientBoostingRegression only in train set and it makes it worse.
+a liitle change in GradientBoostingRegressor only in train set and it makes it worse.
 For SVM results was significantly get worse.
 
 ![image](https://user-images.githubusercontent.com/15922299/232956291-e8ad4bb2-0a49-4894-b7c4-6f4ac3e37735.png)
@@ -106,7 +108,7 @@ For SVM results was significantly get worse.
 ## After Experiment 4 MinmaxScaling (Experiment 4):
 MinMaxScaler rescales the data set such that all feature values are in the range [0, 1] as shown in the right panel below. However, this scaling compress all inliers in the narrow range [0, 0.005] for the transformed number of households.
 
-It makes train data performance better for ridge but not for the test data. However it makes significantly increase in the performance of test data for GradientBoosting. And performance is geting worse for SVM
+It makes train data performance better for ridge but not for the test data. However it makes significantly increase in the performance of test data for GradientBoostingRegressor. And performance is geting worse for SVM
 
 ![image](https://user-images.githubusercontent.com/15922299/232897727-2f97a4a3-f0ca-487f-ae25-199ef6cf6d04.png)
 
@@ -127,11 +129,11 @@ Due to the fact that the dataset was large we couldn’t properly include every 
 
 ![image](https://user-images.githubusercontent.com/15922299/232901223-a699a684-9353-4c1b-9a6b-56edff30d4c8.png)
 
-Ridge and SVM did not show any significant change. However GradientBoosting show slighlty better result.
+Ridge and SVM did not show any significant change. However GradientBoostingRegressor show slighlty better result.
 ![image](https://user-images.githubusercontent.com/15922299/232900686-aa07d95a-69fb-401f-903d-11b438cd7312.png)
 
 ## Pipeline with the Best:
-The final pipeline I created, used the imputer instead of filling Nan value by my approach and also use MinMaxScalor for numerical features and OnehotEncoder for categorical data and also OrdinalEncoder for ordinal features and polynomial degree 2 , with GradientBoostingRegression. Here is the final result:
+The final pipeline I created, used the imputer instead of filling Nan value by my approach and also use MinMaxScalor for numerical features and OnehotEncoder for categorical data and also OrdinalEncoder for ordinal features and polynomial degree 2 , with GradientBoostingRegressor. Here is the final result:
 
 ![image](https://user-images.githubusercontent.com/15922299/232950652-037800b3-9f38-42bd-a1c3-0401723e4427.png)
 
